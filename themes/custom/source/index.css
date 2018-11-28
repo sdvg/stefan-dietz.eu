@@ -128,6 +128,19 @@ a::selection {
   margin-left: 1.2rem;
 }
 
+.go-home-link {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+  fill: currentColor;
+}
+
+.go-home-link__icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .4rem;
+}
+
 .footer {
   display: flex;
   margin-top: 6rem;
