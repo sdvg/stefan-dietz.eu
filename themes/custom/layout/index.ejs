@@ -1,0 +1,34 @@
+<article>
+  <p>
+    Hi!
+    I'm Stefan, a frontend developer based in Munich.
+  </p>
+
+  <p>These are my latest blog posts:</p>
+
+  <ul class="home-posts">
+    <% page.posts.each(function(post) { %>
+    <li>
+      <div class="home-posts__entry">
+        <span class="home-posts__date"><%= date(post.date, config.date_format) %></span>
+        <div class="home-posts__title">
+          <a href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a>
+        </div>
+      </div>
+    </li>
+    <% }) %>
+    <li>
+      <div class="home-posts__entry">
+        <span class="home-posts__date">2017-12-12</span>
+        <div class="home-posts__title">
+          <a href="https://medium.com/offline-camp/an-offline-first-box-7b3c9eae9785" target="_blank" rel="noopener">
+            An Offline First Box
+          </a>
+          (Medium.com)
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

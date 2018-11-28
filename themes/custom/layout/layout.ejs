@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link rel="stylesheet" href="/index.css">
+  <title><%= page.title ? `${page.title} | ` : `` %><%= config.title %></title>
+</head>
+<body>
+  <div class="site">
+    <% if (path !== 'index.html') { %>
+    <header class="header">
+      <a href="/">Home</a>
+    </header>
+    <% } %>
+
+    <main>
+      <%- body %>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-name">
+        Stefan Dietz<br>
+        Munich, Germany
+      </p>
+
+      <ul class="footer-links">
+        <li>
+          <a
+            style="unicode-bidi: bidi-override; direction: rtl;"
+            href="mailto:mail@stefan-dietz.eu"
+          >
+            ue.zteid-nafets@liam
+          </a>
+        </li>
+
+        <li><a href="https://github.com/sdvg">GitHub</a></li>
+        <li><a href="https://twitter.com/sd_vg">Twitter</a></li>
+        <li><a href="https://www.xing.com/profile/Stefan_Dietz25">Xing</a></li>
+      </ul>
+
+      <ul class="footer-links">
+        <li><a href="/impressum.html">Impressum und Datenschutz</a></li>
+        <li><a href="/atom.xml">Feed</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
