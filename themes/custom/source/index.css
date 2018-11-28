@@ -132,13 +132,13 @@ a::selection {
   display: flex;
   margin-bottom: 1rem;
   align-items: center;
-  fill: currentColor;
 }
 
 .go-home-link__icon {
   width: 1.4rem;
   height: 1.4rem;
   margin-right: .4rem;
+  fill: currentColor;
 }
 
 .footer {
@@ -156,6 +156,18 @@ a::selection {
   list-style: none;
   font-size: 1.4rem;
   line-height: 1.6;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer-link__icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .6rem;
+  fill: currentColor;
 }
 
 @media(min-width: 768px) {
