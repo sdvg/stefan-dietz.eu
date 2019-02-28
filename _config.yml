@@ -83,3 +83,8 @@ deploy:
 marked:
   gfm: true
   breaks: false
+
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: false

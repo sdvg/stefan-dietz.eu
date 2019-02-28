@@ -186,3 +186,22 @@ a::selection {
     flex-direction: column;
   }
 }
+
+/* Prism overrides */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 1.4rem;
+  margin: 0 !important;
+  text-shadow: none !important;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"],
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  background: none !important;
+}
+
+pre[class*="language-"] {
+  border: 1px solid #d0d0d0;
+  padding: .5rem !important;
+  background: lightgray !important;
+}
