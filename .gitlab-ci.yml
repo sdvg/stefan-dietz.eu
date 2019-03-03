@@ -16,11 +16,9 @@ build:
   - mkdir "${HOME}/.ssh"
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
   - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@116.203.18.127:/var/www/test.stefan-dietz.eu/html
-
+  only:
+    - master
 
 cache:
   paths:
     - node_modules
-
-only:
-  - master
