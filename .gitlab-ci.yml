@@ -6,18 +6,16 @@ before_script:
 
 build:
   script:
-  - git clone --depth=1 https://github.com/sdvg/blog-posts.git
-  - mv blog-posts/posts source/_posts
-  - npm install
-  - npm run build
-  - ls public
-  - echo "${SSH_PRIVATE_KEY}" > id_rsa
-  - chmod 700 id_rsa
-  - mkdir "${HOME}/.ssh"
-  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
-  - chmod 644 "${HOME}/.ssh/known_hosts"
-  - ssh gitlab@116.203.18.127
-  - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@116.203.18.127:/var/www/test.stefan-dietz.eu/html
+    - echo $SSH_HOST_KEY
+#  - git clone --depth=1 https://github.com/sdvg/blog-posts.git
+#  - mv blog-posts/posts source/_posts
+#  - npm install
+#  - npm run build
+#  - ls public
+#  - echo "${SSH_PRIVATE_KEY}" > id_rsa
+#  - mkdir "${HOME}/.ssh"
+#  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+#  - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@116.203.18.127:/var/www/test.stefan-dietz.eu/html
 
 
 cache:
