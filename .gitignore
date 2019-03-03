@@ -5,3 +5,4 @@ db.json
 node_modules/
 public/
 .deploy*/
+source/_posts/* # posts live in https://github.com/sdvg/blog-posts
