@@ -1,0 +1,24 @@
+image: node:10
+
+before_script:
+  - apt-get update
+  - apt-get --yes --force-yes install rsync
+
+build:
+  script:
+  - git clone --depth=1 https://github.com/sdvg/blog-posts.git
+  - mv blog-posts/posts source/_posts
+  - npm install
+  - npm run build
+  - ls public
+  - echo "${SSH_PRIVATE_KEY}" > id_rsa
+  - chmod 700 id_rsa
+  - mkdir "${HOME}/.ssh"
+  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+  - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@116.203.18.127:/var/www/stefan-dietz.eu/html
+  only:
+    - master
+
+cache:
+  paths:
+    - node_modules
