@@ -1,9 +1,13 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
     "version": "3.8.0"
+  },
+  "scripts": {
+    "build": "hexo generate",
+    "serve": "hexo serve"
   },
   "dependencies": {
     "hexo": "^3.7.0",
