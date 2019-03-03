@@ -7,7 +7,16 @@ build:
   - npm install
   - npm run build
   - ls public
+  - echo "${SSH_PRIVATE_KEY}" > id_rsa
+  - chmod 700 id_rsa
+  - mkdir "${HOME}/.ssh"
+  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+  - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@siqapps.com:/var/www/test.stefan-dietz.eu/html
+
 
 cache:
   paths:
     - node_modules
+
+# only:
+#   - master
