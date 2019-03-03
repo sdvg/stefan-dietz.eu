@@ -5,5 +5,5 @@ build:
   - git clone --depth=1 https://github.com/sdvg/blog-posts.git
   - mv blog-posts/posts source/_posts
   - npm install
-  - npm build
+  - npm run build
   - ls public
