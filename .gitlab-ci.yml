@@ -1,0 +1,9 @@
+image: node: 10
+
+build:
+  script:
+  - git clone --depth=1 https://github.com/sdvg/blog-posts.git
+  - mv blog-posts/posts source/_posts
+  - npm install
+  - npm build
+  - ls public
