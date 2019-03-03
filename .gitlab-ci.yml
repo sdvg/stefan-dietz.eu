@@ -15,6 +15,7 @@ build:
   - chmod 700 id_rsa
   - mkdir "${HOME}/.ssh"
   - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+  - chmod 644 "${HOME}/.ssh/known_hosts"
   - rsync -hrvz --delete -e 'ssh -i id_rsa' public/ gitlab@siqapps.com:/var/www/test.stefan-dietz.eu/html
 
 
